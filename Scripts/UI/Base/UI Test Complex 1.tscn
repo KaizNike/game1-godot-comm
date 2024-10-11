@@ -1,0 +1,105 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpfi75cedd4ru"]
+
+[ext_resource type="Script" path="res://Scripts/UI/Base/UserInterface.gd" id="1_s3h1p"]
+[ext_resource type="Texture2D" uid="uid://dnd5w1h16j4dj" path="res://Test Assets/life_world_map.webp" id="2_sakx4"]
+
+[sub_resource type="Theme" id="Theme_8sfbb"]
+default_font_size = 28
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8sfbb")
+script = ExtResource("1_s3h1p")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="Main" type="Control" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Main/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Main/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Sunset, Slightly Raining"
+
+[node name="HSplitContainer" type="HSplitContainer" parent="TabContainer/Main/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Main/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+texture = ExtResource("2_sakx4")
+stretch_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="TabContainer/Main/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Main/VBoxContainer/HSplitContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="TabContainer/Main/VBoxContainer/HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "John Doe - 85 Years"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/Main/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="TabContainer/Main/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Main/VBoxContainer/HBoxContainer2/PanelContainer"]
+layout_mode = 2
+text = "Abilities"
+
+[node name="PanelContainer2" type="PanelContainer" parent="TabContainer/Main/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/Main/VBoxContainer/HBoxContainer2/PanelContainer2"]
+layout_mode = 2
+text = "1: Make Camp"
+
+[node name="Inventory" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Map" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Log" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Character" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
