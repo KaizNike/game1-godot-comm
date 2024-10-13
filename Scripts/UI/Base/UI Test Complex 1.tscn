@@ -1,9 +1,18 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=4 format=3 uid="uid://cpfi75cedd4ru"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Base/UserInterface.gd" id="1_s3h1p"]
 [ext_resource type="Texture2D" uid="uid://dnd5w1h16j4dj" path="res://Test Assets/life_world_map.webp" id="2_sakx4"]
 
 [sub_resource type="Theme" id="Theme_8sfbb"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://bebh1kbaj8xgc"]
+
+[ext_resource type="Script" path="res://Scripts/UI/Base/UserInterface.gd" id="1_s3h1p"]
+[ext_resource type="Texture2D" uid="uid://b05hj6ognkfqi" path="res://icon.svg" id="2_6xwel"]
+
+[sub_resource type="Theme" id="Theme_r4q0d"]
+>>>>>>> Stashed changes
 default_font_size = 28
 
 [node name="Control" type="Control"]
@@ -13,7 +22,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+<<<<<<< Updated upstream
 theme = SubResource("Theme_8sfbb")
+=======
+theme = SubResource("Theme_r4q0d")
+>>>>>>> Stashed changes
 script = ExtResource("1_s3h1p")
 
 [node name="TabContainer" type="TabContainer" parent="."]
@@ -44,6 +57,11 @@ layout_mode = 2
 layout_mode = 2
 text = "Sunset, Slightly Raining"
 
+<<<<<<< Updated upstream
+=======
+[node name="Sprite2D" type="Sprite2D" parent="TabContainer/Main/VBoxContainer/HBoxContainer/Label"]
+
+>>>>>>> Stashed changes
 [node name="HSplitContainer" type="HSplitContainer" parent="TabContainer/Main/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -52,7 +70,11 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
+<<<<<<< Updated upstream
 texture = ExtResource("2_sakx4")
+=======
+texture = ExtResource("2_6xwel")
+>>>>>>> Stashed changes
 stretch_mode = 4
 
 [node name="PanelContainer" type="PanelContainer" parent="TabContainer/Main/VBoxContainer/HSplitContainer"]
